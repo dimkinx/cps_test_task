@@ -1,0 +1,57 @@
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+}
+
+@mixin focus {
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+@mixin active {
+  &.focus-visible:active {
+    @content;
+  }
+}
+
+@mixin hover-focus {
+  &.focus-visible:focus {
+    @content;
+  }
+
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+}
+
+// Mobile first
+
+@mixin mobile {
+  @media (min-width: $vp-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $vp-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $vp-desktop) {
+    @content;
+  }
+}
