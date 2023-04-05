@@ -1,2 +1,1 @@
-// eslint-disable-next-line no-console
-console.log('vendor scripts');
+import './vendor/focus-visible-polyfill';
