@@ -1,12 +1,18 @@
 <header class="header @@if (context.mod) { header--@@mod }">
+  <button class="header__button btn" type="button" aria-expanded="false" aria-label="Переключить меню">
+    <svg class="header__icon-menu" width="40" height="40" aria-hidden="true">
+      <use xlink:href="#icon-burger"></use>
+    </svg>
+  </button>
+
   @@if (!context.index) {
-  <a class="header__logo" href="index.html" aria-label="Переход на главную">
-    <img class="header__logo-img" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
+  <a class="header__link" href="index.html" aria-label="Переход на главную">
+    <img class="header__logo" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
   </a>
   }
   @@if (context.index) {
-  <span class="header__logo">
-    <img class="header__logo-img" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
+  <span class="header__link">
+    <img class="header__logo" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
   </span>
   }
 

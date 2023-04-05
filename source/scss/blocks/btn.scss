@@ -1,0 +1,30 @@
+.btn {
+  @include hover-focus {
+    color: $color-storm-grey;
+  }
+
+  cursor: pointer;
+
+  display: inline-flex;
+
+  padding: 2px;
+
+  color: $color-violet-red;
+
+  background-color: $color-transparent;
+  border: none;
+  border-radius: 50%;
+
+  transition: color $trans-default;
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  svg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
