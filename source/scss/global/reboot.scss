@@ -26,8 +26,9 @@ html {
 
 body {
   width: 100%;
+  min-width: 320px;
   height: 100%;
-  background-color: $color-white-smoke;
+  background-color: $color-default-white;
 }
 
 a {
@@ -37,7 +38,7 @@ a {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -107,4 +108,10 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+}
+
+:focus-visible,
+.focus-visible:focus {
+  outline: 2px solid $color-black-russian;
+  outline-offset: 2px;
 }
