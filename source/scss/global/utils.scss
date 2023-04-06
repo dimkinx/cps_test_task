@@ -1,15 +1,50 @@
 .wrapper {
   position: relative;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template:
+    "header aside" auto
+    "main main" 1fr
+    "footer footer" auto
+    / 1fr auto;
 
+  max-width: 1440px;
   min-height: 100vh;
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
   min-height: calc(100 * var(--vh, 1vh));
+  margin: 0 auto;
 
-  main {
-    flex-grow: 1;
+  .header {
+    grid-area: header;
+    min-width: 0;
+  }
+
+  .services {
+    grid-area: aside;
+    min-width: 0;
+
+    @media (min-width: $vp-desktop) {
+      position: absolute;
+      top: 40px;
+      right: 32px;
+    }
+  }
+
+  .page-content {
+    grid-area: main;
+    min-width: 0;
+  }
+
+  .footer {
+    grid-area: footer;
+    min-width: 0;
+  }
+
+  @media (min-width: $vp-desktop) {
+    grid-template:
+      "header main" 1fr
+      "header footer" auto
+      / 306px 1fr;
   }
 }
 
