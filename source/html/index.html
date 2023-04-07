@@ -3,19 +3,21 @@
 
   <head>
     @@include("source/html/base/head.html")
-    <title>CPS — Главная</title>
+    <title>CPS — Услуги и сервисы</title>
   </head>
 
   <body>
+    <p class="skip-link-block">
+      <a class="skip-link-block__action link" href="#main">Перейти к основному содержанию</a>
+    </p>
     <div class="visually-hidden">
       @@include("source/img/sprite/sprite.svg")
     </div>
 
     <div class="wrapper">
       @@include("source/html/base/header.html", {"index": true})
-
-      <main></main>
-
+      @@include("source/html/base/aside.html")
+      @@include("source/html/base/main.html")
       @@include("source/html/base/footer.html")
     </div>
     <script src="js/vendor.min.js"></script>

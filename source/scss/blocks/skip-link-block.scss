@@ -1,0 +1,29 @@
+.skip-link-block {
+  margin: 0;
+  text-align: center;
+  background-color: $color-water-leaf;
+
+  &__action {
+    margin: 8px;
+    padding: 0 8px;
+    color: $color-black-russian;
+
+    &:not(:active):not(:focus-visible),
+    &:not(:active):not(.focus-visible) {
+      position: absolute;
+
+      overflow: hidden;
+
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+
+      white-space: nowrap;
+
+      clip: rect(0 0 0 0);
+      clip-path: inset(100%);
+      border: 0;
+    }
+  }
+}
