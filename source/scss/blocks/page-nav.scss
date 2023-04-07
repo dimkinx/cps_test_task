@@ -1,0 +1,25 @@
+.page-nav {
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  margin: 0 0 24px;
+  padding: 4px 16px;
+
+  list-style: none;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__link {
+    white-space: nowrap;
+  }
+
+  @media (min-width: $vp-tablet) {
+    margin-bottom: 32px;
+  }
+}

@@ -1,5 +1,51 @@
 .footer {
-  padding: 40px 0;
+  padding: 16px;
   color: $color-storm-grey;
   background-color: $color-white-smoke;
+  border-top: 1px solid $color-clear-day;
+
+  &__text {
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: $vp-tablet) {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      &--copyright {
+        text-align: left;
+      }
+
+      &--offer {
+        text-align: right;
+      }
+    }
+  }
+
+  &__link {
+    color: $color-storm-grey;
+  }
+
+  @media (min-width: $vp-tablet) {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+
+    &__text {
+      flex-basis: 33%;
+    }
+  }
+
+  @media (min-width: $vp-desktop) {
+    padding: 32px;
+  }
 }

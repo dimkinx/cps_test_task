@@ -1,0 +1,48 @@
+<main class="page-content" id="main">
+  <h1 class="page-content__title">Услуги и сервисы</h1>
+  <ul class="page-nav page-content__page-nav">
+    <li class="page-nav__item">
+      <a class="page-nav__link link link--bordered is-active" href="#">Ремонтируемые бренды</a>
+    </li>
+    <li class="page-nav__item">
+      <a class="page-nav__link link link--bordered" href="#">Ремонтируемые устройства</a>
+    </li>
+    <li class="page-nav__item">
+      <a class="page-nav__link link link--bordered" href="#">Цены на услуги</a>
+    </li>
+    <li class="page-nav__item">
+      <a class="page-nav__link link link--bordered" href="#">Адреса сервисных центров</a>
+    </li>
+    <li class="page-nav__item">
+      <a class="page-nav__link link link--bordered" href="#">Специальные цены</a>
+    </li>
+    <li class="page-nav__item">
+      <a class="page-nav__link link link--bordered" href="#">Отзывы</a>
+    </li>
+  </ul>
+  <div class="welcome page-content__welcome">
+    <div class="welcome__wrapper" data-expander>
+      <div class="welcome__text" id="expandable-text" data-expander-content="text">
+        <p>Мы&nbsp;являемся авторизованным сервисным центром по&nbsp;ремонту техники Dell. Только у&nbsp;нас вы&nbsp;можете отремонтировать свой ноутбук Dell с&nbsp;официальной гарантией производителя.</p>
+        <p>Мы&nbsp;успешно работаем с&nbsp;1992 года и&nbsp;заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы&nbsp;гордимся тем, что к&nbsp;нам обращаются по&nbsp;рекомендациям&nbsp;и, в&nbsp;свою очередь, советуют нас родным и&nbsp;близким.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magni cupiditate minus quidem. Sequi earum fuga quibusdam mollitia, vero magnam. Cum voluptatibus adipisci nemo quod quasi amet excepturi. Sapiente, explicabo?</p>
+      </div>
+
+      <button class="welcome__expand-btn btn btn--expand" type="button" aria-expanded="false" aria-controls="expandable-text" data-expander-btn>
+        <svg class="btn__icon" width="24" height="24" aria-hidden="true">
+          <use xlink:href="#icon-expand" />
+        </svg>
+        <span class="btn__text" data-expander-btn-text>Читать далее</span>
+      </button>
+    </div>
+
+    <picture>
+      <source type="image/webp" media="(min-width: 1366px)" srcset="img/content/content-image-desktop.webp 1x, img/content/content-image-desktop@2x.webp 2x">
+      <source type="image/webp" media="(min-width: 768px)" srcset="img/content/content-image-tablet.webp 1x, img/content/content-image-tablet@2x.webp 2x">
+      <source type="image/webp" srcset="img/content/content-image-mobile.webp 1x, img/content/content-image-mobile@2x.jpg 2x">
+      <source media="(min-width: 1366px)" srcset="img/content/content-image-desktop.jpg 1x, img/content/content-image-desktop@2x.jpg 2x">
+      <source media="(min-width: 768px)" srcset="img/content/content-image-tablet.jpg 1x, img/content/content-image-tablet@2x.jpg 2x">
+      <img class="welcome__img" src="img/content/content-image-mobile.jpg" srcset="img/content/content-image-mobile@2x.jpg 2x" width="320" height="176" alt="CPS">
+    </picture>
+  </div>
+</main>

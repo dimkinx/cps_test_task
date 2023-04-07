@@ -1,30 +1,90 @@
 .btn {
-  @include hover-focus {
-    color: $color-storm-grey;
-  }
-
   cursor: pointer;
 
   display: inline-flex;
+  align-items: center;
 
-  padding: 2px;
+  padding: 0;
 
   color: $color-violet-red;
 
   background-color: $color-transparent;
   border: none;
-  border-radius: 50%;
 
-  transition: color $trans-default;
+  transition: color $trans-default, opacity $trans-default;
 
-  &:disabled {
-    pointer-events: none;
-    opacity: 0.5;
+  &__text {
+    display: none;
+
+    padding: 0 8px;
+
+    font-weight: 500;
+    color: $color-black-russian;
+    letter-spacing: -0.2px;
+
+    transition: color $trans-default;
   }
 
   svg {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+  }
+
+  &--circle {
+    border-radius: 50%;
+  }
+
+  &--rounded {
+    border-radius: 20px;
+  }
+
+  &--expand {
+    margin: 12px 0;
+    color: $color-turquoise;
+    border-radius: 2px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      transition: transform $trans-default;
+    }
+
+    .btn__text {
+      display: inline-block;
+    }
+
+    &[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+
+    &[aria-expanded="false"] svg {
+      transform: rotate(0deg);
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &:active {
+    filter: brightness(0.9);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: $color-storm-grey;
+
+      .btn__text {
+        color: $color-violet-red;
+      }
+    }
+  }
+
+  @media (min-width: $vp-desktop) {
+    &__text {
+      display: inline;
+    }
   }
 }

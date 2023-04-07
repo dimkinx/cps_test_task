@@ -1,0 +1,30 @@
+.link {
+  display: inline-block;
+  border-radius: 2px;
+  transition: color $trans-default;
+
+  &:active {
+    filter: brightness(0.9);
+  }
+
+  &--bordered {
+    padding: 6px 20px;
+
+    font-weight: 500;
+    color: $color-storm-grey;
+    letter-spacing: -0.2px;
+
+    border-radius: 6px;
+
+    &.is-active {
+      background-color: $color-default-white;
+      border: 2px solid $color-water-leaf;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: $color-violet-red;
+    }
+  }
+}

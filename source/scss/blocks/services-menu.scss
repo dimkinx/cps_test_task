@@ -1,0 +1,32 @@
+.services-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  height: 100%;
+  margin: 0 0 0 auto;
+  padding: 0 16px 0 20px;
+
+  line-height: 0;
+  list-style: none;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  @media (min-width: $vp-tablet) {
+    padding: 0 24px 0 20px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    padding: 0;
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+    }
+  }
+}

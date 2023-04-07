@@ -7,7 +7,6 @@
 // ---------------------------------
 
 @import "variables";
-@import "mixins";
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
@@ -16,5 +15,13 @@
 // ---------------------------------
 
 @import "blocks/header";
+@import "blocks/main-nav";
+@import "blocks/user-menu";
+@import "blocks/services-menu";
+@import "blocks/page-content";
+@import "blocks/page-nav";
+@import "blocks/welcome";
 @import "blocks/footer";
 @import "blocks/btn";
+@import "blocks/link";
+@import "blocks/skip-link-block";

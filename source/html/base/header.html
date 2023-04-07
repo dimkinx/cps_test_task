@@ -1,20 +1,55 @@
 <header class="header @@if (context.mod) { header--@@mod }">
-  <button class="header__button btn" type="button" aria-expanded="false" aria-label="Переключить меню">
-    <svg class="header__icon-menu" width="40" height="40" aria-hidden="true">
-      <use xlink:href="#icon-burger"></use>
+  <button class="header__toggle-btn btn btn--circle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Переключить меню">
+    <svg class="header__icon header__icon--burger" width="40" height="40" aria-hidden="true">
+      <use xlink:href="#icon-burger" />
     </svg>
   </button>
 
-  @@if (!context.index) {
-  <a class="header__link" href="index.html" aria-label="Переход на главную">
-    <img class="header__logo" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
-  </a>
-  }
-  @@if (context.index) {
-  <span class="header__link">
-    <img class="header__logo" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
-  </span>
-  }
+  <nav class="main-nav header__main-nav" id="main-nav">
+    @@if (!context.index) {
+    <a class="main-nav__link" href="index.html" aria-label="Переход на главную">
+      <img class="main-nav__logo" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
+    </a>
+    }
+    @@if (context.index) {
+    <span class="main-nav__link">
+      <img class="main-nav__logo" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
+    </span>
+    }
 
-  <nav class="main-nav"></nav>
+    <ul class="main-menu main-nav__main-menu">
+      <li class="main-menu__item">Ремонт техники</li>
+      <li class="main-menu__item">Услуги и сервисы</li>
+      <li class="main-menu__item">Корпоративным клиентам</li>
+      <li class="main-menu__item">Продавцам техники</li>
+      <li class="main-menu__item">Партнерам</li>
+      <li class="main-menu__item">Производителям</li>
+      <li class="main-menu__item">Наши сервисные центры</li>
+      <li class="main-menu__item">Контакты</li>
+    </ul>
+
+    <ul class="user-menu main-nav__user-menu">
+      <li class="user-menu__item">
+        <button class="user-menu__btn btn btn--circle" type="button" aria-label="Заказать звонок">
+          <svg class="user-menu__icon" width="40" height="40" aria-hidden="true">
+            <use xlink:href="#icon-phone" />
+          </svg>
+        </button>
+      </li>
+      <li class="user-menu__item">
+        <button class="user-menu__btn btn btn--circle" type="button" aria-label="Обратная связь">
+          <svg class="user-menu__icon" width="40" height="40" aria-hidden="true">
+            <use xlink:href="#icon-chat" />
+          </svg>
+        </button>
+      </li>
+      <li class="user-menu__item">
+        <button class="user-menu__btn btn btn--circle" type="button" aria-label="Профиль пользователя">
+          <svg class="user-menu__icon" width="40" height="40" aria-hidden="true">
+            <use xlink:href="#icon-profile" />
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
 </header>

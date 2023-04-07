@@ -3,11 +3,28 @@
   align-items: center;
 
   min-height: 88px;
-  padding: 0 24px;
+  padding-left: 16px;
 
   background-color: $color-default-white;
 
-  &__link {
-    color: $color-lynch;
+  &__toggle-btn {
+    margin-right: 16px;
+  }
+
+  @media (min-width: $vp-tablet) {
+    padding-left: 24px;
+
+    &__toggle-btn {
+      margin-right: 20px;
+    }
+  }
+
+  @media (min-width: $vp-desktop) {
+    flex-direction: column;
+    padding-left: 0;
+
+    &__toggle-btn.btn {
+      display: none;
+    }
   }
 }
