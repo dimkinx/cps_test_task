@@ -20,6 +20,7 @@ $color-white-smoke: #f8f8f8;
 $color-violet-red: #ff3e79;
 $color-turquoise: #41f6d7;
 $color-water-leaf: #b8ffec;
+$color-clear-day: #d9fff5;
 $color-default-white-96p: rgba($color-default-white, 0.96);
 
 // Gradient
@@ -40,14 +41,13 @@ $ff-ttlakes: "TT Lakes", "Arial", sans-serif;
 // ---------------------------------
 
 $tf-default: ease;
-$trans-default: 0.3s $tf-default;
+$trans-default: 0.6s $tf-default;
 $trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-$trans-600: 0.6s $tf-default;
 
 // Viewports
 // ---------------------------------
 
-$vp-mobile: 320px;
+$vp-mobile: 360px;
 $vp-tablet: 768px;
 $vp-desktop: 1366px;
 
