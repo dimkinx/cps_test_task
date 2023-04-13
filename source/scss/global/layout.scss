@@ -1,0 +1,49 @@
+.layout {
+  position: relative;
+
+  display: grid;
+  grid-template:
+    "header aside" auto
+    "main main" 1fr
+    "footer footer" auto
+    / 1fr auto;
+
+  max-width: 1440px;
+  min-height: 100vh;
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+  min-height: calc(100 * var(--vh, 1vh));
+  margin: 0 auto;
+
+  .header {
+    grid-area: header;
+    min-width: 0;
+  }
+
+  .services {
+    grid-area: aside;
+    min-width: 0;
+
+    @media (width >= $vp-desktop) {
+      position: absolute;
+      top: 40px;
+      right: 32px;
+    }
+  }
+
+  .page-content {
+    grid-area: main;
+    min-width: 0;
+  }
+
+  .footer {
+    grid-area: footer;
+    min-width: 0;
+  }
+
+  @media (width >= $vp-desktop) {
+    grid-template:
+      "header main" 1fr
+      "header footer" auto
+      / 320px 1fr;
+  }
+}
