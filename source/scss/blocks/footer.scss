@@ -16,7 +16,7 @@
       margin-bottom: 16px;
     }
 
-    @media (min-width: $vp-tablet) {
+    @media (width >= $vp-tablet) {
       &:not(:last-child) {
         margin-bottom: 0;
       }
@@ -35,7 +35,7 @@
     color: $color-storm-grey;
   }
 
-  @media (min-width: $vp-tablet) {
+  @media (width >= $vp-tablet) {
     display: flex;
     justify-content: space-between;
     padding: 24px;
@@ -45,7 +45,7 @@
     }
   }
 
-  @media (min-width: $vp-desktop) {
+  @media (width >= $vp-desktop) {
     padding: 32px;
   }
 }

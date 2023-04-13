@@ -16,11 +16,11 @@
     }
   }
 
-  @media (min-width: $vp-tablet) {
+  @media (width >= $vp-tablet) {
     padding: 0 24px 0 20px;
   }
 
-  @media (min-width: $vp-desktop) {
+  @media (width >= $vp-desktop) {
     padding: 0;
 
     &__item {

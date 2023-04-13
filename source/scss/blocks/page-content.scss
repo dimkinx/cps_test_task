@@ -29,13 +29,7 @@
     }
   }
 
-  &__page-nav {
-  }
-
-  @media (min-width: $vp-tablet) {
-  }
-
-  @media (min-width: $vp-desktop) {
+  @media (width >= $vp-desktop) {
     &__title {
       padding: 40px 35px;
 

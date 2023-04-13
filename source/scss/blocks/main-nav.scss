@@ -44,7 +44,7 @@
     display: none;
   }
 
-  @media (min-width: $vp-tablet) {
+  @media (width >= $vp-tablet) {
     padding: 0 20px;
 
     &::before {
@@ -52,7 +52,7 @@
     }
   }
 
-  @media (min-width: $vp-desktop) {
+  @media (width >= $vp-desktop) {
     flex-direction: column;
     align-items: flex-start;
     padding-left: 0;

@@ -26,7 +26,7 @@
     background-color: $color-storm-grey;
   }
 
-  @media (min-width: $vp-tablet) {
+  @media (width >= $vp-tablet) {
     flex-direction: row;
     padding: 0 24px;
 
@@ -47,7 +47,7 @@
     }
   }
 
-  @media (min-width: $vp-desktop) {
+  @media (width >= $vp-desktop) {
     margin-bottom: 32px;
     padding: 0 32px;
 

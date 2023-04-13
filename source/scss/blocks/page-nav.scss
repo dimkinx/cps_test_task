@@ -19,7 +19,7 @@
     white-space: nowrap;
   }
 
-  @media (min-width: $vp-tablet) {
+  @media (width >= $vp-tablet) {
     margin-bottom: 32px;
   }
 }
