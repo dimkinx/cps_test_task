@@ -28,7 +28,12 @@
   svg {
     width: 40px;
     height: 40px;
+
     border-radius: 50%;
+
+    fill: $color-default-white;
+
+    transition: fill $trans-default;
   }
 
   &--circle {
@@ -41,13 +46,13 @@
 
   &--expand {
     margin: 12px 0;
-    color: $color-turquoise;
     border-radius: 2px;
 
     svg {
       width: 24px;
       height: 24px;
-      transition: transform $trans-default;
+      fill: $color-turquoise;
+      transition: fill $trans-default, transform $trans-default;
     }
 
     .btn__text {
@@ -74,15 +79,19 @@
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      color: $color-storm-grey;
+      color: $color-default-white;
 
       .btn__text {
         color: $color-violet-red;
       }
+
+      svg {
+        fill: $color-violet-red;
+      }
     }
   }
 
-  @media (min-width: $vp-desktop) {
+  @media (width >= $vp-desktop) {
     &__text {
       display: inline;
     }
