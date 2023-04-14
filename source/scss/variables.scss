@@ -25,10 +25,15 @@ $color-default-white-96p: rgba($color-default-white, 0.96);
 
 // Gradient
 
-$white-smoke-to-right: linear-gradient(
+$white-smoke-to-white: linear-gradient(
   90deg,
   $color-white-smoke 0%,
   $color-default-white 98.61%
+);
+$white-smoke-to-transparent: linear-gradient(
+  90deg,
+  $color-white-smoke 16.84%,
+  $color-transparent 100%
 );
 
 // Typography
