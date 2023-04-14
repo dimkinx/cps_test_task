@@ -6,12 +6,8 @@
 
   padding: 0;
 
-  color: $color-violet-red;
-
   background-color: $color-transparent;
   border: none;
-
-  transition: color $trans-default, opacity $trans-default;
 
   &__text {
     display: none;
@@ -19,7 +15,6 @@
     padding: 0 8px;
 
     font-weight: 500;
-    color: $color-black-russian;
     letter-spacing: -0.2px;
 
     transition: color $trans-default;
@@ -29,11 +24,13 @@
     width: 40px;
     height: 40px;
 
-    border-radius: 50%;
+    color: $color-default-white;
 
-    fill: $color-default-white;
+    fill: $color-violet-red;
+    stroke: $color-violet-red;
+    stroke-width: 2px;
 
-    transition: fill $trans-default;
+    transition: color $trans-default, fill $trans-default;
   }
 
   &--circle {
@@ -51,8 +48,8 @@
     svg {
       width: 24px;
       height: 24px;
-      fill: $color-turquoise;
-      transition: fill $trans-default, transform $trans-default;
+      color: $color-turquoise;
+      transition: transform $trans-default;
     }
 
     .btn__text {
@@ -79,14 +76,11 @@
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      color: $color-default-white;
-
-      .btn__text {
-        color: $color-violet-red;
-      }
+      color: $color-violet-red;
 
       svg {
-        fill: $color-violet-red;
+        color: $color-violet-red;
+        fill: $color-default-white;
       }
     }
   }
