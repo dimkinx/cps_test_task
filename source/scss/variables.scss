@@ -35,6 +35,10 @@ $white-smoke-to-transparent: linear-gradient(
   $color-white-smoke 16.84%,
   $color-transparent 100%
 );
+$transparent-to-white-smoke: linear-gradient(
+  $color-transparent 16.84%,
+  $color-white-smoke 100%
+);
 
 // Typography
 // ---------------------------------

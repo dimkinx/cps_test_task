@@ -1,11 +1,7 @@
 .link {
   display: inline-block;
   border-radius: 2px;
-  transition: color $trans-default;
-
-  &:active {
-    filter: brightness(0.9);
-  }
+  transition: color $trans-default, background-color $trans-default;
 
   &--bordered {
     padding: 6px 20px;
@@ -20,6 +16,16 @@
       background-color: $color-default-white;
       border: 2px solid $color-water-leaf;
     }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  &:active {
+    filter: brightness(0.95);
   }
 
   @media (hover: hover) and (pointer: fine) {
