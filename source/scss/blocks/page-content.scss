@@ -1,5 +1,6 @@
 .page-content {
   background-color: $color-white-smoke;
+  border-top: 1px solid $color-clear-day;
 
   &__title {
     position: relative;
@@ -29,9 +30,17 @@
     }
   }
 
-  @media (width >= $vp-desktop) {
+  @media (min-width: $vp-tablet) {
     &__title {
-      padding: 40px 35px;
+      padding: 24px;
+    }
+  }
+
+  @media (min-width: $vp-desktop) {
+    border-top: none;
+
+    &__title {
+      padding: 40px 32px;
 
       &::before {
         left: 2px;

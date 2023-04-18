@@ -15,8 +15,20 @@
     &:not(:last-child) {
       margin-bottom: 16px;
     }
+  }
 
-    @media (width >= $vp-tablet) {
+  &__link {
+    color: $color-storm-grey;
+  }
+
+  @media (min-width: $vp-tablet) {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+
+    &__text {
+      flex-basis: 33%;
+
       &:not(:last-child) {
         margin-bottom: 0;
       }
@@ -31,21 +43,7 @@
     }
   }
 
-  &__link {
-    color: $color-storm-grey;
-  }
-
-  @media (width >= $vp-tablet) {
-    display: flex;
-    justify-content: space-between;
-    padding: 24px;
-
-    &__text {
-      flex-basis: 33%;
-    }
-  }
-
-  @media (width >= $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     padding: 32px;
   }
 }

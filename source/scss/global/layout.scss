@@ -23,7 +23,7 @@
     grid-area: aside;
     min-width: 0;
 
-    @media (width >= $vp-desktop) {
+    @media (min-width: $vp-desktop) {
       position: absolute;
       top: 40px;
       right: 32px;
@@ -40,7 +40,7 @@
     min-width: 0;
   }
 
-  @media (width >= $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     grid-template:
       "header main" 1fr
       "header footer" auto

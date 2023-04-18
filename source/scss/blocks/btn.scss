@@ -42,14 +42,14 @@
   }
 
   &--expand {
-    margin: 12px 0;
+    margin-bottom: 24px;
     border-radius: 2px;
 
     svg {
       width: 24px;
       height: 24px;
       color: $color-turquoise;
-      transition: transform $trans-default;
+      transition: transform $trans-default, color $trans-default;
     }
 
     .btn__text {
@@ -71,7 +71,7 @@
   }
 
   &:active {
-    filter: brightness(0.9);
+    filter: brightness(0.95);
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -85,7 +85,7 @@
     }
   }
 
-  @media (width >= $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     &__text {
       display: inline;
     }

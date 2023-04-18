@@ -13,13 +13,13 @@
     }
   }
 
-  @media (width >= $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
   }
 
-  @media (width >= $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     margin: 0;
   }
 }
