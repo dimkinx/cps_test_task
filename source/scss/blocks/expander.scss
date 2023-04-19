@@ -1,6 +1,7 @@
 .expander {
   &__content {
     position: relative;
+    margin-bottom: 4px;
     padding-bottom: 20px;
 
     &::after {
@@ -12,7 +13,7 @@
       left: 0;
 
       width: 100%;
-      height: 20px;
+      height: 16px;
 
       background: $transparent-to-white-smoke;
     }
