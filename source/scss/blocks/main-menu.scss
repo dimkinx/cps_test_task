@@ -1,0 +1,45 @@
+.main-menu {
+  margin: 0;
+  padding: 0 16px 0 0;
+  font-weight: 500;
+  list-style: none;
+
+  &__item {
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    padding-left: 16px;
+  }
+
+  &__link.is-active {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+
+      width: 4px;
+      height: 32px;
+
+      background: $color-turquoise;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  @media (min-width: $vp-mobile) {
+    &__link {
+      padding-left: 24px;
+    }
+  }
+
+  @media (min-width: $vp-desktop) {
+    &__item {
+      margin-bottom: 32px;
+    }
+  }
+}

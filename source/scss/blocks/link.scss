@@ -13,6 +13,7 @@
     border-radius: 6px;
 
     &.is-active {
+      pointer-events: none;
       background-color: $color-default-white;
       border: 2px solid $color-water-leaf;
     }
@@ -22,6 +23,11 @@
         background-color: $color-default-white;
       }
     }
+  }
+
+  &.is-active {
+    pointer-events: none;
+    color: $color-storm-grey;
   }
 
   &:active {

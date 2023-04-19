@@ -18,16 +18,21 @@
 // Blocks
 // ---------------------------------
 
+@import "blocks/logo";
+@import "blocks/btn";
+@import "blocks/link";
 @import "blocks/header";
-@import "blocks/expander";
+@import "blocks/toggle-btn";
 @import "blocks/main-nav";
+@import "blocks/main-menu";
 @import "blocks/user-menu";
+@import "blocks/address";
+@import "blocks/localization";
 @import "blocks/services";
 @import "blocks/services-menu";
 @import "blocks/page-content";
 @import "blocks/page-nav";
+@import "blocks/expander";
 @import "blocks/about";
 @import "blocks/footer";
-@import "blocks/btn";
-@import "blocks/link";
 @import "blocks/skip-link-block";

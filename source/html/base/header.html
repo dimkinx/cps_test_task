@@ -1,31 +1,56 @@
 <header class="header @@if (context.mod) { header--@@mod }">
-  <button class="header__toggle-btn btn btn--circle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Переключить меню">
-    <svg class="header__icon header__icon--burger" width="40" height="40" aria-hidden="true">
+  <button class="toggle-btn header__toggle-btn btn btn--circle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Переключить меню">
+    <svg class="toggle-btn__burger" width="40" height="40" aria-hidden="true">
       <use xlink:href="#icon-burger" />
+    </svg>
+    <svg class="toggle-btn__close" width="40" height="40" aria-hidden="true">
+      <use xlink:href="#icon-close" />
+    </svg>
+  </button>
+
+  <button class="header__search-btn btn btn--circle" type="button" aria-label="Начать поиск">
+    <svg class="header__search-icon" width="40" height="40" aria-hidden="true">
+      <use xlink:href="#icon-search" />
     </svg>
   </button>
 
   <nav class="main-nav header__main-nav" id="main-nav">
     @@if (!context.index) {
-    <a class="main-nav__link" href="index.html" aria-label="Переход на главную">
-      <img class="main-nav__logo" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
+    <a class="logo main-nav__logo" href="index.html" aria-label="Переход на главную">
+      <img class="logo__img" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
     </a>
     }
     @@if (context.index) {
-    <span class="main-nav__link">
-      <img class="main-nav__logo" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
+    <span class="logo main-nav__logo">
+      <img class="logo__img" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
     </span>
     }
 
     <ul class="main-menu main-nav__main-menu">
-      <li class="main-menu__item">Ремонт техники</li>
-      <li class="main-menu__item">Услуги и сервисы</li>
-      <li class="main-menu__item">Корпоративным клиентам</li>
-      <li class="main-menu__item">Продавцам техники</li>
-      <li class="main-menu__item">Партнерам</li>
-      <li class="main-menu__item">Производителям</li>
-      <li class="main-menu__item">Наши сервисные центры</li>
-      <li class="main-menu__item">Контакты</li>
+      <li class="main-menu__item">
+        <a class="main-menu__link link" href="#">Ремонт техники</a>
+      </li>
+      <li class="main-menu__item">
+        <span class="main-menu__link link is-active">Услуги и сервисы</span>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link link" href="#">Корпоративным клиентам</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link link" href="#">Продавцам техники</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link link" href="#">Партнерам</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link link" href="#">Производителям</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link link" href="#">Наши сервисные центры</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link link" href="#">Контакты</a>
+      </li>
     </ul>
 
     <ul class="user-menu main-nav__user-menu">
@@ -51,5 +76,23 @@
         </button>
       </li>
     </ul>
+
+    <address class="address main-nav__address">
+      <a class="address__mail-link link" href="mailto:mail@cps.com">mail@cps.com</a>
+      <a class="address__tel-link link" href="tel:88008908900">8&nbsp;800&nbsp;890&nbsp;8900</a>
+    </address>
+
+    <ul class="localization main-nav__localization">
+      <li class="localization__item">
+        <span class="localization__link link is-active">ru</span>
+      </li>
+      <li class="localization__item">
+        <a class="localization__link link" href="#">en</a>
+      </li>
+      <li class="localization__item">
+        <a class="localization__link link" href="#">ch</a>
+      </li>
+    </ul>
+
   </nav>
 </header>
