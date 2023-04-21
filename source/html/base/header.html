@@ -1,98 +1,102 @@
-<header class="header layout__header @@if (context.mod) { header--@@mod }">
-  <button class="toggle-btn header__toggle-btn btn btn--circle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Переключить меню">
-    <svg class="toggle-btn__burger" width="40" height="40" aria-hidden="true">
-      <use xlink:href="#icon-burger" />
-    </svg>
-    <svg class="toggle-btn__close" width="40" height="40" aria-hidden="true">
-      <use xlink:href="#icon-close" />
-    </svg>
-  </button>
+<header class="header layout__header @@if (context.mod) { header--@@mod }" data-menu>
+  <div class="header__inner">
+    <button class="btn btn--circle header__toggle-btn" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Переключить меню" data-menu-btn>
+      <svg class="btn__icon header__toggle-btn-icon header__toggle-btn-icon--burger" width="40" height="40" aria-hidden="true">
+        <use xlink:href="#icon-burger" />
+      </svg>
+      <svg class="btn__icon header__toggle-btn-icon header__toggle-btn-icon--close" width="40" height="40" aria-hidden="true">
+        <use xlink:href="#icon-close" />
+      </svg>
+    </button>
 
-  <button class="header__search-btn btn btn--circle" type="button" aria-label="Начать поиск">
-    <svg class="header__search-icon" width="40" height="40" aria-hidden="true">
-      <use xlink:href="#icon-search" />
-    </svg>
-  </button>
+    <button class="header__search-btn btn btn--circle" type="button" aria-label="Начать поиск">
+      <svg class="btn__icon" width="40" height="40" aria-hidden="true">
+        <use xlink:href="#icon-search" />
+      </svg>
+    </button>
 
-  <nav class="main-nav header__main-nav" id="main-nav">
-    @@if (!context.index) {
-    <a class="logo main-nav__logo" href="index.html" aria-label="Переход на главную">
-      <img class="logo__img" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
-    </a>
-    }
-    @@if (context.index) {
-    <span class="logo main-nav__logo">
-      <img class="logo__img" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
-    </span>
-    }
+    <nav class="main-nav header__main-nav" id="main-nav">
+      @@if (!context.index) {
+      <a class="logo main-nav__logo" href="index.html" aria-label="Переход на главную">
+        <img class="logo__img" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
+      </a>
+      }
+      @@if (context.index) {
+      <span class="logo main-nav__logo">
+        <img class="logo__img" src="img/svg/logo.svg" width="97" height="51" alt="Логотип CPS">
+      </span>
+      }
 
-    <ul class="main-menu main-nav__main-menu">
-      <li class="main-menu__item">
-        <a class="main-menu__link link" href="#">Ремонт техники</a>
-      </li>
-      <li class="main-menu__item">
-        <span class="main-menu__link link is-active">Услуги и сервисы</span>
-      </li>
-      <li class="main-menu__item">
-        <a class="main-menu__link link" href="#">Корпоративным клиентам</a>
-      </li>
-      <li class="main-menu__item">
-        <a class="main-menu__link link" href="#">Продавцам техники</a>
-      </li>
-      <li class="main-menu__item">
-        <a class="main-menu__link link" href="#">Партнерам</a>
-      </li>
-      <li class="main-menu__item">
-        <a class="main-menu__link link" href="#">Производителям</a>
-      </li>
-      <li class="main-menu__item">
-        <a class="main-menu__link link" href="#">Наши сервисные центры</a>
-      </li>
-      <li class="main-menu__item">
-        <a class="main-menu__link link" href="#">Контакты</a>
-      </li>
-    </ul>
+      <ul class="main-menu main-nav__main-menu">
+        <li class="main-menu__item">
+          <a class="main-menu__link link" href="#">Ремонт техники</a>
+        </li>
+        <li class="main-menu__item">
+          <span class="main-menu__link link is-active">Услуги и сервисы</span>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link link" href="#">Корпоративным клиентам</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link link" href="#">Продавцам техники</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link link" href="#">Партнерам</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link link" href="#">Производителям</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link link" href="#">Наши сервисные центры</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link link" href="#">Контакты</a>
+        </li>
+      </ul>
 
-    <ul class="user-menu main-nav__user-menu">
-      <li class="user-menu__item">
-        <button class="user-menu__btn btn btn--circle" type="button" aria-label="Заказать звонок">
-          <svg class="user-menu__icon" width="40" height="40" aria-hidden="true">
-            <use xlink:href="#icon-phone" />
-          </svg>
-        </button>
-      </li>
-      <li class="user-menu__item">
-        <button class="user-menu__btn btn btn--circle" type="button" aria-label="Обратная связь">
-          <svg class="user-menu__icon" width="40" height="40" aria-hidden="true">
-            <use xlink:href="#icon-chat" />
-          </svg>
-        </button>
-      </li>
-      <li class="user-menu__item">
-        <button class="user-menu__btn btn btn--circle" type="button" aria-label="Профиль пользователя">
-          <svg class="user-menu__icon" width="40" height="40" aria-hidden="true">
-            <use xlink:href="#icon-profile" />
-          </svg>
-        </button>
-      </li>
-    </ul>
+      <ul class="user-menu main-nav__user-menu">
+        <li class="user-menu__item">
+          <a class="btn btn--circle user-menu__btn" href="#">
+            <span class="btn__text visually-hidden">Заказать звонок</span>
+            <svg class="btn__icon" width="40" height="40" aria-hidden="true">
+              <use xlink:href="#icon-phone" />
+            </svg>
+          </a>
+        </li>
+        <li class="user-menu__item">
+          <a class="btn btn--circle user-menu__btn" href="#">
+            <span class="btn__text visually-hidden">Обратная связь</span>
+            <svg class="btn__icon" width="40" height="40" aria-hidden="true">
+              <use xlink:href="#icon-chat" />
+            </svg>
+          </a>
+        </li>
+        <li class="user-menu__item">
+          <a class="btn btn--circle user-menu__btn" href="#">
+            <span class="btn__text visually-hidden">Профиль пользователя</span>
+            <svg class="btn__icon" width="40" height="40" aria-hidden="true">
+              <use xlink:href="#icon-profile" />
+            </svg>
+          </a>
+        </li>
+      </ul>
 
-    <address class="address main-nav__address">
-      <a class="address__mail-link link" href="mailto:mail@cps.com">mail@cps.com</a>
-      <a class="address__tel-link link" href="tel:88008908900">8&nbsp;800&nbsp;890&nbsp;8900</a>
-    </address>
+      <address class="address main-nav__address">
+        <a class="address__mail-link link" href="mailto:mail@cps.com">mail@cps.com</a>
+        <a class="address__tel-link link" href="tel:88008908900">8&nbsp;800&nbsp;890&nbsp;8900</a>
+      </address>
 
-    <ul class="localization main-nav__localization">
-      <li class="localization__item">
-        <span class="localization__link link is-active">ru</span>
-      </li>
-      <li class="localization__item">
-        <a class="localization__link link" href="#">en</a>
-      </li>
-      <li class="localization__item">
-        <a class="localization__link link" href="#">ch</a>
-      </li>
-    </ul>
-
-  </nav>
+      <ul class="localization main-nav__localization">
+        <li class="localization__item">
+          <span class="localization__link link is-active">ru</span>
+        </li>
+        <li class="localization__item">
+          <a class="localization__link link" href="#">en</a>
+        </li>
+        <li class="localization__item">
+          <a class="localization__link link" href="#">ch</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>

@@ -1,45 +1,239 @@
 .header {
-  position: relative;
+  &__inner {
+    display: flex;
+    align-items: center;
 
-  display: flex;
-  align-items: center;
+    min-height: 88px;
+    padding: 0 16px;
 
-  min-width: 320px;
-  min-height: 88px;
-  padding-left: 16px;
+    background-color: $color-default-white;
+  }
 
-  background-color: $color-default-white;
-
-  &__toggle-btn {
-    z-index: 100;
-    margin-right: 16px;
+  &__toggle-btn-icon {
+    &--close {
+      display: none;
+    }
   }
 
   &__search-btn {
-    z-index: 100;
     display: none;
   }
 
-  @media (min-width: $vp-tablet) {
-    padding-left: 24px;
+  &__main-nav {
+    margin: 0 16px;
+  }
 
-    &__toggle-btn {
-      margin-right: 20px;
+  @media (min-width: $vp-mobile) {
+    &__inner {
+      padding: 0 0 0 24px;
+    }
+  }
+
+  @media (min-width: $vp-tablet) {
+    &__main-nav {
+      margin: 0 24px;
     }
   }
 
   @media (min-width: $vp-desktop) {
-    flex-direction: column;
-    padding-left: 0;
+    &__inner {
+      position: fixed;
+
+      flex-direction: column;
+
+      width: 320px;
+      height: 100%;
+      padding: 30px 24px 32px;
+    }
 
     &__toggle-btn {
       display: none;
     }
 
     &__search-btn {
+      position: absolute;
+      z-index: 1;
+      top: 35px;
+      right: 29px;
+
       display: inline-flex;
-      align-self: flex-end;
-      margin: 32px 24px;
+    }
+
+    &__main-nav {
+      margin: 0;
+    }
+  }
+}
+
+[data-menu-opened].header,
+[data-menu-closed].header {
+  @media (max-width: calc($vp-desktop - 1px)) {
+    position: absolute;
+    z-index: 99;
+    inset: 0;
+
+    grid-area: unset;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background-color: $color-default-white-96p;
+
+    animation: overlay $trans-modal;
+  }
+}
+
+[data-menu-opened].header {
+  @media (max-width: calc($vp-desktop - 1px)) {
+    animation-direction: normal;
+  }
+}
+
+[data-menu-closed].header {
+  @media (max-width: calc($vp-desktop - 1px)) {
+    animation-direction: reverse;
+  }
+}
+
+[data-menu-opened] .header,
+[data-menu-closed] .header {
+  @media (max-width: calc($vp-desktop - 1px)) {
+    &__inner {
+      position: fixed;
+      z-index: 100;
+
+      width: 320px;
+      height: 100%;
+      padding: 0 0 32px;
+
+      box-shadow: $menu-shadow;
+
+      transition: width $trans-default;
+      animation: modal $trans-modal;
+    }
+
+    &__toggle-btn {
+      position: absolute;
+      z-index: 1;
+      top: 24px;
+      left: 24px;
+
+      display: inline-flex;
+    }
+
+    &__toggle-btn-icon {
+      &--burger {
+        display: none;
+      }
+
+      &--close {
+        display: inline-flex;
+      }
+    }
+
+    &__search-btn {
+      position: absolute;
+      z-index: 1;
+      top: 24px;
+      right: 24px;
+
+      display: inline-flex;
+    }
+
+    &__main-nav {
+      flex-direction: column;
+      align-items: stretch;
+      height: 100%;
+      padding: 0;
+
+      &::before {
+        content: none;
+      }
+
+      &::after {
+        content: none;
+      }
+
+      .logo {
+        margin: 18px 0 48px 56px;
+      }
+
+      .main-menu {
+        display: block;
+      }
+
+      .user-menu {
+        display: flex;
+        margin: auto 0 16px;
+        padding-top: 24px;
+      }
+
+      .address {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .localization {
+        display: flex;
+      }
+    }
+  }
+
+  @media (max-width: calc($vp-tablet - 1px)) {
+    &__inner {
+      width: 100%;
+    }
+
+    &__toggle-btn {
+      left: 24px;
+    }
+
+    &__search-btn {
+      right: 24px;
+      left: unset;
+    }
+
+    &__main-nav {
+      width: 100%;
+      margin: 0 24px;
+
+      & .logo {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  @media (max-width: calc($vp-mobile - 1px)) {
+    &__toggle-btn {
+      left: 16px;
+    }
+
+    &__search-btn {
+      right: 16px;
+    }
+
+    &__main-nav {
+      margin: 0 16px;
+
+      & .logo {
+        margin-left: 72px;
+      }
+    }
+  }
+}
+
+[data-menu-opened] .header {
+  @media (max-width: calc($vp-desktop - 1px)) {
+    &__inner {
+      animation-direction: normal;
+    }
+  }
+}
+
+[data-menu-closed] .header {
+  @media (max-width: calc($vp-desktop - 1px)) {
+    &__inner {
+      animation-direction: reverse;
     }
   }
 }
