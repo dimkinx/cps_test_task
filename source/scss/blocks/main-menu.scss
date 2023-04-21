@@ -1,15 +1,16 @@
 .main-menu {
-  margin: 0;
-  padding: 0 16px 0 0;
+  overflow-y: auto;
+
+  min-height: 24px;
+  margin: 0 0 0 -16px;
+  padding: 4px 16px 4px 0;
+
   font-weight: 500;
   list-style: none;
 
   &__item {
     margin-bottom: 24px;
-  }
-
-  &__link {
-    padding-left: 16px;
+    padding: 0 16px;
   }
 
   &__link.is-active {
@@ -20,7 +21,7 @@
 
       position: absolute;
       top: 50%;
-      left: 0;
+      left: -16px;
       transform: translateY(-50%);
 
       width: 4px;
@@ -32,14 +33,38 @@
   }
 
   @media (min-width: $vp-mobile) {
-    &__link {
-      padding-left: 24px;
+    margin: 0 0 0 -24px;
+
+    &__item {
+      padding: 0 24px;
+    }
+
+    &__link.is-active {
+      &::before {
+        left: -24px;
+      }
+    }
+  }
+
+  @media (min-width: $vp-tablet) {
+    &__item {
+      margin-bottom: 32px;
     }
   }
 
   @media (min-width: $vp-desktop) {
+    padding: 4px 0;
+
     &__item {
-      margin-bottom: 32px;
+      margin-bottom: 26px;
+    }
+
+    &__link.is-active {
+      &::before {
+        left: -23px;
+        height: 28px;
+        border-radius: 2px;
+      }
     }
   }
 }
