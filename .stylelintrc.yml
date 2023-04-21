@@ -16,6 +16,9 @@ rules:
   # Expected class pattern to be BEM style
   selector-class-pattern: ^([a-z][a-z0-9]*)(-[a-z0-9]+)*((__([a-z][a-z0-9]*)(-[a-z0-9]+)*)?(--([a-z][a-z0-9]*)(-[a-z0-9]+)*)?)$
 
+  # Specify context or prefix notation for media feature ranges
+  media-feature-range-notation: "prefix"
+
   # The following prefix rules are enabled since we use autoprefixer
   at-rule-no-vendor-prefix: true
   media-feature-name-no-vendor-prefix: true
