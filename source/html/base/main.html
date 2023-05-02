@@ -1,5 +1,5 @@
 <main class="page-content layout__page-content" id="main">
-  <h1 class="page-content__title">Услуги и сервисы</h1>
+  <h1 class="page-content__title">Услуги и&nbsp;сервисы</h1>
 
   <div class="page-nav page-content__page-nav">
     <ul class="page-nav__list">
@@ -7,10 +7,10 @@
         <a class="page-nav__link link link--bordered is-active" href="#brands" tabindex="-1">Ремонтируемые бренды</a>
       </li>
       <li class="page-nav__item">
-        <a class="page-nav__link link link--bordered" href="#">Ремонтируемые устройства</a>
+        <a class="page-nav__link link link--bordered" href="#equipment-types">Ремонтируемые устройства</a>
       </li>
       <li class="page-nav__item">
-        <a class="page-nav__link link link--bordered" href="#">Цены на услуги</a>
+        <a class="page-nav__link link link--bordered" href="#prices">Цены на&nbsp;услуги</a>
       </li>
       <li class="page-nav__item">
         <a class="page-nav__link link link--bordered" href="#">Адреса сервисных центров</a>
@@ -22,7 +22,6 @@
         <a class="page-nav__link link link--bordered" href="#">Отзывы</a>
       </li>
     </ul>
-    <!-- <div class="swiper-pagination"></div> -->
   </div>
 
   <article class="about page-content__about">
@@ -193,6 +192,8 @@
         </li>
       </ul>
 
+      <div class="swiper-pagination"></div>
+
       <button class="expander__btn btn btn--expand" type="button" aria-expanded="false" aria-controls="expandable-brands" data-expander-btn>
         <svg class="btn__icon" width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-expand" />
@@ -201,6 +202,7 @@
       </button>
     </div>
   </section>
+
   <section class="equipment-types page-content__equipment-types" id="equipment-types">
     <h2 class="equipment-types__title page-content__section-title">Ремонт различных видов техники</h2>
 
@@ -272,6 +274,8 @@
         </li>
       </ul>
 
+      <div class="swiper-pagination"></div>
+
       <button class="expander__btn btn btn--expand" type="button" aria-expanded="false" aria-controls="expandable-equipment-types" data-expander-btn>
         <svg class="btn__icon" width="24" height="24" aria-hidden="true">
           <use xlink:href="#icon-expand" />
@@ -280,16 +284,101 @@
       </button>
     </div>
   </section>
-  <section class="prices page-content__prices" id="prices">
-    <h2 class="prices__title page-content__section-title">Цены на услуги</h2>
 
-    <div class="prices__wrapper">
-      <figure class="prices__content">
-        <figcaption>
-          <p>Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
-          <p><a href="#">Получить коммерческое предложение</a></p>
-        </figcaption>
-      </figure>
-    </div>
+  <section class="prices page-content__prices" id="prices">
+    <h2 class="prices__title page-content__section-title">Цены на&nbsp;услуги</h2>
+
+    <figure class="prices__content">
+      <table class="prices__table">
+        <thead>
+          <tr>
+            <th scope="col">Ремонтные услуги</th>
+            <th scope="col">Цена</th>
+            <th scope="col">Срок</th>
+            <th class="visually-hidden" scope="col">Действия</th>
+          </tr>
+        </thead>
+        <tbody class="prices__tbody">
+          <tr>
+            <td data-label="Ремонтные услуги">Диагностика</td>
+            <td data-label="Цена">Бесплатно</td>
+            <td data-label="Срок">30&nbsp;мин</td>
+            <td>
+              <button class="prices__table-btn btn btn--action" type="button">
+                <span class="btn__text">Заказать</span>
+                <svg class="btn__icon" width="40" height="40" aria-hidden="true">
+                  <use xlink:href="#icon-goside" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Ремонтные услуги">Замена дисплея</td>
+            <td data-label="Цена">1&nbsp;000&nbsp;₽</td>
+            <td data-label="Срок">30-120 мин</td>
+            <td>
+              <button class="prices__table-btn btn btn--action" type="button">
+                <span class="btn__text">Заказать</span>
+                <svg class="btn__icon" width="40" height="40" aria-hidden="true">
+                  <use xlink:href="#icon-goside" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Ремонтные услуги">Замена полифонического динамика</td>
+            <td data-label="Цена">1&nbsp;000&nbsp;₽</td>
+            <td data-label="Срок">30-120 мин</td>
+            <td>
+              <button class="prices__table-btn btn btn--action" type="button">
+                <span class="btn__text">Заказать</span>
+                <svg class="btn__icon" width="40" height="40" aria-hidden="true">
+                  <use xlink:href="#icon-goside" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Ремонтные услуги">Тестирование с&nbsp;выдачей технического заключения</td>
+            <td data-label="Цена">1&nbsp;000&nbsp;₽</td>
+            <td data-label="Срок">30-120 мин</td>
+            <td>
+              <button class="prices__table-btn btn btn--action" type="button">
+                <span class="btn__text">Заказать</span>
+                <svg class="btn__icon" width="40" height="40" aria-hidden="true">
+                  <use xlink:href="#icon-goside" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Ремонтные услуги">Замена программного обеспечения</td>
+            <td data-label="Цена">1&nbsp;000&nbsp;₽</td>
+            <td data-label="Срок">30-120 мин</td>
+            <td>
+              <button class="prices__table-btn btn btn--action" type="button">
+                <span class="btn__text">Заказать</span>
+                <svg class="btn__icon" width="40" height="40" aria-hidden="true">
+                  <use xlink:href="#icon-goside" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="swiper-pagination"></div>
+
+      <figcaption>
+        <p>Все цены указаны с&nbsp;учетом НДС. Стоимость ремонта указана на&nbsp;единичную услугу. Для получения коммерческого предложения на&nbsp;постоянное обслуживание, оставьте заявку.</p>
+        <p>
+          <a href="#">
+            <span>Получить коммерческое предложение</span>
+            <svg class="btn__icon" width="40" height="40" aria-hidden="true">
+              <use xlink:href="#icon-more" />
+            </svg>
+          </a>
+        </p>
+      </figcaption>
+    </figure>
   </section>
 </main>
