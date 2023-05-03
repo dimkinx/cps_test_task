@@ -1,8 +1,13 @@
 .expander {
   &__content {
     position: relative;
+
+    overflow: hidden;
+
     margin-bottom: 4px;
     padding-bottom: 20px;
+
+    transition: max-height $trans-default;
 
     &::after {
       content: "";
@@ -16,6 +21,14 @@
       height: 16px;
 
       background: $transparent-to-white-smoke;
+    }
+  }
+
+  @media (max-width: calc($vp-tablet - 1px)) {
+    &:not([data-expander="text"]) {
+      .expander__btn {
+        display: none;
+      }
     }
   }
 }

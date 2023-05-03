@@ -17,7 +17,7 @@ const buttonClickHandler = (evt) => {
   if (button.getAttribute('aria-expanded') === 'true') {
     content.style.maxHeight = null;
     button.setAttribute('aria-expanded', 'false');
-    buttonText.textContent = content.dataset.expanderContent === 'text'
+    buttonText.textContent = container.dataset.expander === 'text'
       ? 'Читать далее'
       : 'Показать всё';
 
