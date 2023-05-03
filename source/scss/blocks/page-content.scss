@@ -30,9 +30,27 @@
     }
   }
 
-  @media (min-width: $vp-tablet) {
+  &__section-title {
+    margin: 0;
+    padding: 16px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $color-storm-grey;
+    text-transform: uppercase;
+
+    background: $white-smoke-to-white;
+    border-top: 1px solid $color-clear-day;
+  }
+
+  @media (min-width: $vp-mobile) {
     &__title {
       padding: 24px;
+    }
+
+    &__section-title {
+      padding: 16px 24px;
     }
   }
 
@@ -47,6 +65,10 @@
         width: 3px;
         border-radius: 2px;
       }
+    }
+
+    &__section-title {
+      padding: 16px 32px;
     }
   }
 }

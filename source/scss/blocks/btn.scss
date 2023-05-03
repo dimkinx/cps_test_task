@@ -42,7 +42,6 @@
   }
 
   &--expand {
-    margin-bottom: 24px;
     border-radius: 2px;
 
     svg {
@@ -65,6 +64,25 @@
     }
   }
 
+  &--go {
+    width: 100%;
+    min-width: 200px;
+    min-height: 72px;
+    padding: 0 16px;
+
+    background: $color-default-white;
+    border: 1px solid $color-whisper;
+    border-radius: 6px;
+
+    transition: border-color $trans-default;
+
+    svg {
+      margin-left: auto;
+      color: $color-violet-red;
+      fill: $color-default-white;
+    }
+  }
+
   &:disabled {
     pointer-events: none;
     opacity: 0.5;
@@ -81,6 +99,15 @@
       svg {
         color: $color-violet-red;
         fill: $color-default-white;
+      }
+
+      &.btn--go {
+        border-color: $color-mischka;
+
+        svg {
+          color: $color-default-white;
+          fill: $color-violet-red;
+        }
       }
     }
   }

@@ -1,0 +1,56 @@
+.brands {
+  &__wrapper {
+    @include side-blur;
+
+    padding: 16px;
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-columns: 240px;
+    grid-auto-flow: column;
+    row-gap: 16px;
+    column-gap: 24px;
+
+    margin: -16px -16px 0;
+    padding: 16px;
+
+    list-style: none;
+  }
+
+  @media (min-width: $vp-mobile) {
+    &__wrapper {
+      padding: 24px;
+    }
+
+    &__list {
+      margin: -24px -24px 0;
+      padding: 24px;
+    }
+  }
+
+  @media (min-width: $vp-tablet) {
+    &__list {
+      grid-auto-flow: row;
+      grid-auto-rows: 72px;
+      grid-template-columns: repeat(3, auto);
+      max-height: 200px;
+    }
+  }
+
+  @media (min-width: $vp-desktop) {
+    &__wrapper {
+      padding: 24px 32px;
+    }
+
+    &__list {
+      grid-auto-flow: row;
+      grid-auto-rows: 72px;
+      grid-template-columns: repeat(4, auto);
+      column-gap: 32px;
+
+      margin: -24px -32px 0;
+      padding: 24px 32px;
+    }
+  }
+}
