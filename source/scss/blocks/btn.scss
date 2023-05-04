@@ -10,13 +10,9 @@
   border: none;
 
   &__text {
-    display: none;
-
     padding: 0 8px;
-
     font-weight: 500;
     letter-spacing: -0.2px;
-
     transition: color $trans-default;
   }
 
@@ -64,7 +60,8 @@
     }
   }
 
-  &--go {
+  &--go,
+  &--text-go {
     width: 100%;
     min-width: 200px;
     min-height: 72px;
@@ -80,6 +77,21 @@
       margin-left: auto;
       color: $color-violet-red;
       fill: $color-default-white;
+    }
+  }
+
+  &--text-go {
+    flex-direction: column;
+    min-height: 160px;
+    padding: 16px;
+
+    .btn__text {
+      align-self: flex-start;
+      padding: 0;
+    }
+
+    svg {
+      margin-top: auto;
     }
   }
 
@@ -101,20 +113,15 @@
         fill: $color-default-white;
       }
 
-      &.btn--go {
-        border-color: $color-mischka;
+      &.btn--go,
+      &.btn--text-go {
+        border-color: $color-water-leaf;
 
         svg {
           color: $color-default-white;
           fill: $color-violet-red;
         }
       }
-    }
-  }
-
-  @media (min-width: $vp-desktop) {
-    &__text {
-      display: inline;
     }
   }
 }
