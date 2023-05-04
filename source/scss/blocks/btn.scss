@@ -95,6 +95,45 @@
     }
   }
 
+  &--action {
+    padding: 4px;
+    color: $color-default-white;
+    background-color: $color-violet-red;
+    border-radius: 16px;
+
+    .btn__text {
+      position: relative;
+
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 24px;
+      text-transform: uppercase;
+    }
+
+    .btn__text::after {
+      content: "";
+
+      position: absolute;
+      bottom: 4px;
+      left: 8px;
+      transform-origin: bottom right;
+      transform: scaleX(0);
+
+      width: 80%;
+      height: 2px;
+
+      background-color: $color-default-white;
+
+      transition: transform $trans-default;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      margin-left: auto;
+    }
+  }
+
   &:disabled {
     pointer-events: none;
     opacity: 0.5;
@@ -120,6 +159,15 @@
         svg {
           color: $color-default-white;
           fill: $color-violet-red;
+        }
+      }
+
+      &.btn--action {
+        color: $color-default-white;
+
+        .btn__text::after {
+          transform-origin: bottom left;
+          transform: scaleX(1);
         }
       }
     }
