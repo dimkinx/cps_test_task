@@ -1,0 +1,200 @@
+.prices {
+  &__content {
+    margin: 0 0 32px;
+  }
+
+  &__swiper {
+    padding: 16px;
+  }
+
+  &__wrapper {
+    margin: -16px -16px 0;
+    padding: 16px;
+  }
+
+  &__table {
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+  }
+
+  &__thead {
+    th {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      color: $color-storm-grey;
+      text-align: left;
+
+      opacity: 0.72;
+    }
+  }
+
+  &__caption {
+    padding: 0 16px;
+
+    p {
+      margin-top: 0;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+    }
+  }
+
+  @media (min-width: $vp-mobile) {
+    &__swiper {
+      padding: 24px;
+    }
+
+    &__wrapper {
+      margin: -24px -24px 0;
+      padding: 24px;
+    }
+
+    &__caption {
+      padding: 0 24px;
+    }
+  }
+
+  @media (min-width: $vp-tablet) {
+    &__wrapper {
+      margin: 0;
+      padding: 0;
+    }
+
+    &__table {
+      border-spacing: 0;
+      border-collapse: separate;
+      width: 100%;
+    }
+
+    &__thead {
+      th {
+        padding: 16px;
+      }
+    }
+
+    &__tbody {
+      background-color: $color-default-white;
+
+      td {
+        padding: 16px;
+      }
+
+      tr td:last-of-type {
+        text-align: right;
+      }
+
+      tr:first-of-type td:first-of-type {
+        border-top-left-radius: 6px;
+      }
+
+      tr:first-of-type td:last-of-type {
+        border-top-right-radius: 6px;
+      }
+
+      tr:last-of-type td:first-of-type {
+        border-bottom-left-radius: 6px;
+      }
+
+      tr:last-of-type td:last-of-type {
+        border-bottom-right-radius: 6px;
+      }
+
+      tr:not(:last-child) td {
+        border-bottom: 1px solid $color-whisper;
+      }
+    }
+  }
+
+  @media (min-width: $vp-desktop) {
+    &__swiper {
+      padding: 24px 32px;
+    }
+
+    &__caption {
+      padding: 0 32px;
+    }
+  }
+
+  @media (max-width: calc($vp-tablet - 1px)) {
+    &__swiper {
+      @include side-blur;
+    }
+
+    &__wrapper {
+      overflow: hidden;
+    }
+
+    &__thead {
+      position: absolute;
+
+      overflow: hidden;
+
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+
+      white-space: nowrap;
+
+      clip: rect(0 0 0 0);
+      clip-path: inset(100%);
+      border: 0;
+    }
+
+    &__tbody {
+      display: grid;
+      grid-auto-columns: 260px;
+      grid-auto-flow: column;
+      row-gap: 16px;
+      column-gap: 24px;
+
+      tr {
+        position: relative;
+
+        display: grid;
+        row-gap: 16px;
+
+        padding: 16px;
+
+        background-color: $color-default-white;
+        border-radius: 6px;
+      }
+
+      td:not([data-label]) {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+      }
+
+      td {
+        position: relative;
+        padding: 0;
+        font-size: 14px;
+        line-height: 18px;
+
+        &::before {
+          content: attr(data-label);
+
+          position: relative;
+          z-index: 1;
+
+          display: block;
+
+          margin-bottom: 4px;
+
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 16px;
+          color: $color-storm-grey;
+
+          opacity: 0.72;
+        }
+      }
+    }
+  }
+}

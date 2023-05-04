@@ -60,9 +60,9 @@
   <section class="brands page-content__brands" id="brands">
     <h2 class="brands__title page-content__section-title">Ремонт техники различных брендов</h2>
 
-    <div class="expander brands__wrapper" data-expander>
+    <div class="expander brands__swiper" data-expander>
 
-      <div class="expander__wrapper">
+      <div class="expander__wrapper brands__wrapper">
         <ul class="expander__content brands__list" id="expandable-brands" data-expander-content>
           <li class="brands__item">
             <button class="brands__btn btn btn--go" type="button" aria-label="Ремонт техники бренда Lenovo">
@@ -213,9 +213,9 @@
   <section class="equipment-types page-content__equipment-types" id="equipment-types">
     <h2 class="equipment-types__title page-content__section-title">Ремонт различных видов техники</h2>
 
-    <div class="expander equipment-types__wrapper" data-expander>
+    <div class="expander equipment-types__swiper" data-expander>
 
-      <div class="expander__wrapper">
+      <div class="expander__wrapper equipment-types__wrapper">
         <ul class="expander__content equipment-types__list" id="expandable-equipment-types" data-expander-content>
           <li class="equipment-types__item">
             <button class="equipment-types__btn btn btn--text-go" type="button">
@@ -300,91 +300,95 @@
     <h2 class="prices__title page-content__section-title">Цены на&nbsp;услуги</h2>
 
     <figure class="prices__content">
-      <table class="prices__table">
-        <thead class="prices__thead">
-          <tr>
-            <th scope="col">Ремонтные услуги</th>
-            <th scope="col">Цена</th>
-            <th scope="col">Срок</th>
-            <th class="visually-hidden" scope="col">Заказать услугу</th>
-          </tr>
-        </thead>
-        <tbody class="prices__tbody">
-          <tr>
-            <td data-label="Ремонтные услуги">Диагностика</td>
-            <td data-label="Цена">Бесплатно</td>
-            <td data-label="Срок">30&nbsp;мин</td>
-            <td>
-              <button class="prices__table-btn btn btn--action" type="button">
-                <span class="btn__text">Заказать</span>
-                <svg class="btn__icon" width="24" height="24" aria-hidden="true">
-                  <use xlink:href="#icon-goside" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td data-label="Ремонтные услуги">Замена дисплея</td>
-            <td data-label="Цена">1&nbsp;000&nbsp;₽</td>
-            <td data-label="Срок">30-120 мин</td>
-            <td>
-              <button class="prices__table-btn btn btn--action" type="button">
-                <span class="btn__text">Заказать</span>
-                <svg class="btn__icon" width="24" height="24" aria-hidden="true">
-                  <use xlink:href="#icon-goside" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td data-label="Ремонтные услуги">Замена полифонического динамика</td>
-            <td data-label="Цена">1&nbsp;000&nbsp;₽</td>
-            <td data-label="Срок">30-120 мин</td>
-            <td>
-              <button class="prices__table-btn btn btn--action" type="button">
-                <span class="btn__text">Заказать</span>
-                <svg class="btn__icon" width="24" height="24" aria-hidden="true">
-                  <use xlink:href="#icon-goside" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td data-label="Ремонтные услуги">Тестирование с&nbsp;выдачей технического заключения</td>
-            <td data-label="Цена">1&nbsp;000&nbsp;₽</td>
-            <td data-label="Срок">30-120 мин</td>
-            <td>
-              <button class="prices__table-btn btn btn--action" type="button">
-                <span class="btn__text">Заказать</span>
-                <svg class="btn__icon" width="24" height="24" aria-hidden="true">
-                  <use xlink:href="#icon-goside" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td data-label="Ремонтные услуги">Замена программного обеспечения</td>
-            <td data-label="Цена">1&nbsp;000&nbsp;₽</td>
-            <td data-label="Срок">30-120 мин</td>
-            <td>
-              <button class="prices__table-btn btn btn--action" type="button">
-                <span class="btn__text">Заказать</span>
-                <svg class="btn__icon" width="24" height="24" aria-hidden="true">
-                  <use xlink:href="#icon-goside" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="swiper-pagination"></div>
+      <div class="prices__swiper">
+        <div class="prices__wrapper">
+          <table class="prices__table">
+            <thead class="prices__thead">
+              <tr>
+                <th scope="col">Ремонтные услуги</th>
+                <th scope="col">Цена</th>
+                <th scope="col">Срок</th>
+                <th class="visually-hidden" scope="col">Заказать услугу</th>
+              </tr>
+            </thead>
+            <tbody class="prices__tbody">
+              <tr>
+                <td data-label="Ремонтные услуги">Диагностика</td>
+                <td data-label="Цена">Бесплатно</td>
+                <td data-label="Срок">30&nbsp;мин</td>
+                <td>
+                  <button class="prices__table-btn btn btn--action" type="button">
+                    <span class="btn__text">Заказать</span>
+                    <svg class="btn__icon" width="24" height="24" aria-hidden="true">
+                      <use xlink:href="#icon-goside" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Ремонтные услуги">Замена дисплея</td>
+                <td data-label="Цена">1&nbsp;000&nbsp;₽</td>
+                <td data-label="Срок">30&#8209;120&nbsp;мин</td>
+                <td>
+                  <button class="prices__table-btn btn btn--action" type="button">
+                    <span class="btn__text">Заказать</span>
+                    <svg class="btn__icon" width="24" height="24" aria-hidden="true">
+                      <use xlink:href="#icon-goside" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Ремонтные услуги">Замена полифонического динамика</td>
+                <td data-label="Цена">1&nbsp;000&nbsp;₽</td>
+                <td data-label="Срок">30&#8209;120&nbsp;мин</td>
+                <td>
+                  <button class="prices__table-btn btn btn--action" type="button">
+                    <span class="btn__text">Заказать</span>
+                    <svg class="btn__icon" width="24" height="24" aria-hidden="true">
+                      <use xlink:href="#icon-goside" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Ремонтные услуги">Тестирование с&nbsp;выдачей технического заключения</td>
+                <td data-label="Цена">1&nbsp;000&nbsp;₽</td>
+                <td data-label="Срок">30&#8209;120&nbsp;мин</td>
+                <td>
+                  <button class="prices__table-btn btn btn--action" type="button">
+                    <span class="btn__text">Заказать</span>
+                    <svg class="btn__icon" width="24" height="24" aria-hidden="true">
+                      <use xlink:href="#icon-goside" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Ремонтные услуги">Замена программного обеспечения</td>
+                <td data-label="Цена">1&nbsp;000&nbsp;₽</td>
+                <td data-label="Срок">30&#8209;120&nbsp;мин</td>
+                <td>
+                  <button class="prices__table-btn btn btn--action" type="button">
+                    <span class="btn__text">Заказать</span>
+                    <svg class="btn__icon" width="24" height="24" aria-hidden="true">
+                      <use xlink:href="#icon-goside" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="prices__swiper-pagination"></div>
+      </div>
 
-      <figcaption>
+      <figcaption class="prices__caption">
         <p>Все цены указаны с&nbsp;учетом НДС. Стоимость ремонта указана на&nbsp;единичную услугу. Для получения коммерческого предложения на&nbsp;постоянное обслуживание, оставьте заявку.</p>
         <p>
-          <a class="link link--pic" href="#">
+          <a class="link link--more prices__caption-link" href="#">
             <span class="link__text">Получить коммерческое предложение</span>
-            <svg class="link__icon" width="40" height="40" aria-hidden="true">
+            <svg class="link__icon" width="24" height="24" aria-hidden="true">
               <use xlink:href="#icon-more" />
             </svg>
           </a>
