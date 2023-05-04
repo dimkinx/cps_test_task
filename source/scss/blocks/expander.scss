@@ -1,13 +1,6 @@
 .expander {
-  &__content {
+  &__wrapper {
     position: relative;
-
-    overflow: hidden;
-
-    margin-bottom: 4px;
-    padding-bottom: 20px;
-
-    transition: max-height $trans-default;
 
     &::after {
       content: "";
@@ -22,6 +15,15 @@
 
       background: $transparent-to-white-smoke;
     }
+  }
+
+  &__content {
+    overflow: hidden;
+    transition: max-height $trans-default;
+  }
+
+  &__btn {
+    margin-top: 4px;
   }
 
   @media (max-width: calc($vp-tablet - 1px)) {
