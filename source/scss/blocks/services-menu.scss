@@ -16,11 +16,19 @@
     }
   }
 
+  &__btn-text {
+    display: none;
+  }
+
   @media (min-width: $vp-desktop) {
     &__item {
       &:not(:last-child) {
         margin-right: 24px;
       }
+    }
+
+    &__btn-text {
+      display: inline;
     }
   }
 }

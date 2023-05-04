@@ -1,4 +1,8 @@
 .services {
   min-height: 88px;
   padding: 0 24px 0 0;
+
+  @media (min-width: $vp-desktop) {
+    padding: 0;
+  }
 }
