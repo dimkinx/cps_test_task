@@ -7,15 +7,10 @@
   }
 
   &__text {
-    overflow: hidden;
-
     max-height: 110px;
-
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.2px;
-
-    transition: max-height $trans-default;
 
     & p {
       margin: 0 0 20px;
@@ -24,6 +19,12 @@
 
   &__img {
     background-color: $color-whisper;
+  }
+
+  @media (min-width: $vp-mobile) {
+    &__wrapper {
+      padding: 0 24px;
+    }
   }
 
   @media (min-width: $vp-tablet) {
