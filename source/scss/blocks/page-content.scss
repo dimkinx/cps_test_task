@@ -44,6 +44,10 @@
     border-top: 1px solid $color-clear-day;
   }
 
+  &__about {
+    margin-bottom: 32px;
+  }
+
   @media (min-width: $vp-mobile) {
     &__title {
       padding: 24px;

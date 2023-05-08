@@ -3,18 +3,11 @@
     margin: 0 0 32px;
   }
 
-  &__swiper {
-    padding: 16px;
-  }
-
-  &__wrapper {
-    margin: -16px -16px 0;
-    padding: 16px;
-  }
-
   &__table {
     border-spacing: 0;
     border-collapse: collapse;
+
+    padding: 16px;
 
     font-size: 14px;
     line-height: 18px;
@@ -45,12 +38,7 @@
   }
 
   @media (min-width: $vp-mobile) {
-    &__swiper {
-      padding: 24px;
-    }
-
-    &__wrapper {
-      margin: -24px -24px 0;
+    &__table {
       padding: 24px;
     }
 
@@ -60,11 +48,6 @@
   }
 
   @media (min-width: $vp-tablet) {
-    &__wrapper {
-      margin: 0;
-      padding: 0;
-    }
-
     &__table {
       border-spacing: 0;
       border-collapse: separate;
@@ -77,7 +60,7 @@
       }
     }
 
-    &__tbody {
+    &__list {
       background-color: $color-default-white;
 
       td {
@@ -111,8 +94,8 @@
   }
 
   @media (min-width: $vp-desktop) {
-    &__swiper {
-      padding: 24px 32px;
+    &__table {
+      padding: 32px;
     }
 
     &__caption {
@@ -121,12 +104,14 @@
   }
 
   @media (max-width: calc($vp-tablet - 1px)) {
-    &__swiper {
+    &__wrapper {
       @include side-blur;
     }
 
-    &__wrapper {
+    &__table {
       overflow: hidden;
+      display: block;
+      margin-bottom: 16px;
     }
 
     &__thead {
@@ -146,12 +131,8 @@
       border: 0;
     }
 
-    &__tbody {
-      display: grid;
-      grid-auto-columns: 260px;
-      grid-auto-flow: column;
-      row-gap: 16px;
-      column-gap: 24px;
+    &__list {
+      display: flex;
 
       tr {
         position: relative;
@@ -159,6 +140,7 @@
         display: grid;
         row-gap: 16px;
 
+        min-width: 260px;
         padding: 16px;
 
         background-color: $color-default-white;

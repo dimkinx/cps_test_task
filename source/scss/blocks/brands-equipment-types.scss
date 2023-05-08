@@ -3,20 +3,19 @@
   &__wrapper {
     @include side-blur;
 
+    overflow: hidden;
     padding: 16px;
   }
 
   &__list {
-    display: grid;
-    grid-auto-columns: 240px;
-    grid-auto-flow: column;
-    row-gap: 16px;
-    column-gap: 24px;
-
+    display: flex;
     margin: -16px -16px 0;
     padding: 16px;
-
     list-style: none;
+  }
+
+  &__item {
+    min-width: 240px;
   }
 
   @media (min-width: $vp-mobile) {
@@ -36,9 +35,18 @@
     }
 
     &__list {
+      display: grid;
+      grid-auto-columns: 240px;
       grid-auto-flow: row;
       grid-template-columns: repeat(3, auto);
+      row-gap: 16px;
+      column-gap: 24px;
+
       max-height: 200px;
+    }
+
+    &__item {
+      min-width: 200px;
     }
   }
 
