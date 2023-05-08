@@ -26,7 +26,8 @@
   }
 
   &--more {
-    display: inline-flex;
+    position: relative;
+    display: inline;
 
     .link__text {
       position: relative;
@@ -55,9 +56,12 @@
     }
 
     svg {
+      position: absolute;
+
       width: 24px;
       height: 24px;
       margin-left: auto;
+
       color: $color-violet-red;
     }
   }
