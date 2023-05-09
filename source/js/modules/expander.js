@@ -15,7 +15,7 @@ const buttonClickHandler = (evt) => {
   evt.preventDefault();
 
   if (button.getAttribute('aria-expanded') === 'true') {
-    content.style.maxHeight = null;
+    content.removeAttribute('style');
     button.setAttribute('aria-expanded', 'false');
     buttonText.textContent = container.dataset.expander === 'text'
       ? 'Читать далее'
@@ -24,6 +24,7 @@ const buttonClickHandler = (evt) => {
     return;
   }
 
+  content.removeAttribute('style');
   content.style.maxHeight = `${content.scrollHeight}px`;
   button.setAttribute('aria-expanded', 'true');
   buttonText.textContent = 'Скрыть';
