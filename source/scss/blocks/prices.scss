@@ -132,7 +132,8 @@
     }
 
     &__list {
-      display: flex;
+      display: grid;
+      grid-auto-flow: column;
 
       tr {
         position: relative;

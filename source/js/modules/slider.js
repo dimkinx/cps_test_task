@@ -1,6 +1,12 @@
-const sliders = document.querySelectorAll('[data-swiper]');
+const MIN_RESOLUTION = 768;
 
-const createConfig = (dataAttrValue, configType) => ((configType && configType === 'simple')
+const breakpoint = window.matchMedia(`(min-width:${MIN_RESOLUTION}px)`);
+const sliderNodes = document.querySelectorAll('[data-swiper]');
+const slidersCollection = new Map();
+
+let windowWidth = window.innerWidth;
+
+const createConfig = (dataAttrValue, configType) => ((configType && (configType === 'simple'))
   ? {
     wrapperClass: `${dataAttrValue}__list`,
     slideClass: `${dataAttrValue}__item`,
@@ -12,20 +18,10 @@ const createConfig = (dataAttrValue, configType) => ((configType && configType =
   : {
     wrapperClass: `${dataAttrValue}__list`,
     slideClass: `${dataAttrValue}__item`,
+    pagination: true,
+    createElements: true,
     slidesPerView: 'auto',
     grabCursor: true,
-    freeMode: {
-      enabled: true,
-      momentumBounce: false,
-    },
-    loop: true,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    },
-    speed: 5000,
-    createElements: true,
-    pagination: true,
     a11y: {
       slideLabelMessage: 'Слайд {{index}} из {{slidesLength}}',
     },
@@ -45,16 +41,42 @@ const createConfig = (dataAttrValue, configType) => ((configType && configType =
     },
   });
 
-const initSlider = () => {
-  sliders.forEach((slider) => {
-    const config = createConfig(
-      slider.dataset.swiper,
-      slider.dataset.swiperConfig,
-    );
+const createSliders = () => {
+  sliderNodes.forEach((sliderNode) => {
+    const swiper = new window.Swiper(sliderNode, createConfig(
+      sliderNode.dataset.swiper,
+      sliderNode.dataset.swiperConfigType,
+    ));
 
-    // eslint-disable-next-line no-unused-vars
-    const swiper = new window.Swiper(slider, config);
+    slidersCollection.set(sliderNode.dataset.swiper, swiper);
   });
 };
 
-export default initSlider;
+const windowResizeHandler = () => {
+  if (windowWidth === window.innerWidth) {
+    return;
+  }
+
+  windowWidth = window.innerWidth;
+
+  if (breakpoint.matches && slidersCollection.size) {
+    slidersCollection.forEach((slider) => {
+      if (!slider.isBeginning) {
+        slider.slideTo(0);
+      }
+    });
+  }
+};
+
+const initSliders = () => {
+  if (sliderNodes.length) {
+    createSliders();
+    window.addEventListener('resize', windowResizeHandler);
+
+    return;
+  }
+
+  window.removeEventListener('resize', windowResizeHandler);
+};
+
+export default initSliders;
