@@ -26,16 +26,15 @@
   }
 
   &--more {
-    position: relative;
     display: inline;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
 
     .link__text {
       position: relative;
-
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 24px;
-      letter-spacing: -0.2px;
     }
 
     .link__text::after {
@@ -56,10 +55,10 @@
     }
 
     svg {
-      position: absolute;
+      display: inline;
 
-      width: 24px;
-      height: 24px;
+      width: 16px;
+      height: 16px;
       margin-left: auto;
 
       color: $color-violet-red;
