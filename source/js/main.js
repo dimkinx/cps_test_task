@@ -1,12 +1,12 @@
-import initExpander from './modules/expander';
 import initSliders from './modules/slider';
+import initMenu from './modules/menu';
+import initExpander from './modules/expander';
 
 window.addEventListener('DOMContentLoaded', () => {
-  // eslint-disable-next-line no-console
-  console.log('DOM Content Loaded');
+  initSliders();
 
   window.addEventListener('load', () => {
+    initMenu();
     initExpander();
-    initSliders();
   });
 });
