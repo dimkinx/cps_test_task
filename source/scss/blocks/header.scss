@@ -65,35 +65,6 @@
   }
 }
 
-[data-menu-opened].header,
-[data-menu-closed].header {
-  @media (max-width: calc($vp-desktop - 1px)) {
-    position: absolute;
-    z-index: 99;
-    inset: 0;
-
-    grid-area: unset;
-    flex-direction: column;
-    align-items: flex-start;
-
-    background-color: $color-default-white-96p;
-
-    animation: overlay $trans-modal;
-  }
-}
-
-[data-menu-opened].header {
-  @media (max-width: calc($vp-desktop - 1px)) {
-    animation-direction: normal;
-  }
-}
-
-[data-menu-closed].header {
-  @media (max-width: calc($vp-desktop - 1px)) {
-    animation-direction: reverse;
-  }
-}
-
 [data-menu-opened] .header,
 [data-menu-closed] .header {
   @media (max-width: calc($vp-desktop - 1px)) {
@@ -235,5 +206,34 @@
     &__inner {
       animation-direction: reverse;
     }
+  }
+}
+
+[data-menu-opened].header,
+[data-menu-closed].header {
+  @media (max-width: calc($vp-desktop - 1px)) {
+    position: absolute;
+    z-index: 99;
+    inset: 0;
+
+    grid-area: unset;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background-color: $color-default-white-96p;
+
+    animation: overlay $trans-modal;
+  }
+}
+
+[data-menu-opened].header {
+  @media (max-width: calc($vp-desktop - 1px)) {
+    animation-direction: normal;
+  }
+}
+
+[data-menu-closed].header {
+  @media (max-width: calc($vp-desktop - 1px)) {
+    animation-direction: reverse;
   }
 }
