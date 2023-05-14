@@ -227,6 +227,12 @@
 }
 
 [data-menu-opened].header {
+  cursor: pointer;
+
+  .header__inner {
+    cursor: default;
+  }
+
   @media (max-width: calc($vp-desktop - 1px)) {
     animation-direction: normal;
   }
