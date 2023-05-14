@@ -9,12 +9,6 @@
       </svg>
     </button>
 
-    <button class="header__search-btn btn btn--circle" type="button" aria-label="Начать поиск">
-      <svg class="btn__icon" width="40" height="40" aria-hidden="true">
-        <use xlink:href="#icon-search" />
-      </svg>
-    </button>
-
     <nav class="main-nav header__main-nav" id="main-nav">
       @@if (!context.index) {
       <a class="logo main-nav__logo" href="index.html" aria-label="Переход на главную">
@@ -98,5 +92,11 @@
         </li>
       </ul>
     </nav>
+
+    <button class="header__search-btn btn btn--circle" type="button" aria-label="Начать поиск">
+      <svg class="btn__icon" width="40" height="40" aria-hidden="true">
+        <use xlink:href="#icon-search" />
+      </svg>
+    </button>
   </div>
 </header>
