@@ -1,0 +1,16 @@
+<div class="modal @@if (context.mod) { modal--@@mod }" data-modal="@@name">
+  <div class="modal__wrapper">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__content">
+
+      @@include("source/html/components/modal-@@name.html")
+
+      <button class="btn btn--circle modal__close-btn" type="button" aria-label="Закрыть модальное окно" data-close-modal>
+        <svg class="btn__icon" width="40" height="40" aria-hidden="true">
+          <use xlink:href="#icon-close" />
+        </svg>
+      </button>
+
+    </div>
+  </div>
+</div>
