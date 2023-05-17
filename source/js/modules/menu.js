@@ -88,11 +88,11 @@ function closeMenu() {
 
 function openMenu() {
   document.removeEventListener('click', documentClickHandler);
+  lockFocus('[data-menu]');
+  lockScroll();
   menu.setAttribute('data-menu-opened', '');
 
   setTimeout(() => {
-    lockFocus('[data-menu]');
-    lockScroll();
     addListeners();
   }, EVENT_TIMEOUT);
 }
