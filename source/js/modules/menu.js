@@ -74,16 +74,16 @@ const removeListeners = () => {
 };
 
 function closeMenu() {
-  menu.removeAttribute('data-menu-opened', '');
-  removeListeners();
-  unlockFocus();
-  unlockScroll();
   menu.setAttribute('data-menu-closed', '');
 
   setTimeout(() => {
+    menu.removeAttribute('data-menu-opened', '');
     menu.removeAttribute('data-menu-closed', '');
+    unlockFocus();
+    unlockScroll();
+    removeListeners();
     document.addEventListener('click', documentClickHandler);
-  }, EVENT_TIMEOUT);
+  }, EVENT_TIMEOUT / 2);
 }
 
 function openMenu() {

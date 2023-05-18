@@ -20,6 +20,16 @@
   }
 }
 
+@keyframes overlay-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 @keyframes modal {
   from {
     transform: translateX(-100%);
@@ -27,5 +37,15 @@
 
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes modal-out {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
   }
 }
