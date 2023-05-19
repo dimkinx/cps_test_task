@@ -6,6 +6,7 @@ const MIN_RESOLUTION = 1366;
 
 const breakpoint = window.matchMedia(`(min-width:${MIN_RESOLUTION}px)`);
 const menu = document.querySelector('[data-menu]');
+const btn = menu.querySelector('[data-menu-btn]');
 
 let windowWidth = window.innerWidth;
 
@@ -79,6 +80,7 @@ function closeMenu() {
   setTimeout(() => {
     menu.removeAttribute('data-menu-opened', '');
     menu.removeAttribute('data-menu-closed', '');
+    btn.setAttribute('aria-expanded', 'false');
     unlockFocus();
     unlockScroll();
     removeListeners();
@@ -91,6 +93,7 @@ function openMenu() {
   lockFocus('[data-menu]');
   lockScroll();
   menu.setAttribute('data-menu-opened', '');
+  btn.setAttribute('aria-expanded', 'true');
 
   setTimeout(() => {
     addListeners();
