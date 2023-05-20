@@ -65,6 +65,21 @@
     }
   }
 
+  &--grey,
+  &--accent {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: color $trans-default, text-decoration $trans-default;
+  }
+
+  &--accent {
+    color: $color-violet-red;
+  }
+
+  &--grey {
+    color: $color-storm-grey;
+  }
+
   &.is-active {
     pointer-events: none;
     color: $color-storm-grey;
@@ -83,6 +98,12 @@
           transform-origin: bottom left;
           transform: scaleX(1);
         }
+      }
+
+      &.link--accent,
+      &.link--grey {
+        color: $color-default-black;
+        text-decoration-color: $color-default-black;
       }
     }
   }
