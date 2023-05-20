@@ -1,25 +1,25 @@
 <form class="modal__form" action="#" method="post" target="_blank">
   <h2 class="modal__title">Обратная связь</h2>
-  <ul class="modal__form-content">
-    <li>
+  <ul class="modal__form-content modal__form-content--list">
+    <li class="modal__form-content-item">
       <label class="visually-hidden" for="feedback-name">Ваше имя:</label>
       <input class="modal__form-input" type="text" name="name" placeholder="Имя" id="feedback-name" required>
     </li>
-    <li>
+    <li class="modal__form-content-item">
       <label class="visually-hidden" for="feedback-number">Телефонный номер:</label>
       <input class="modal__form-input" type="tel" name="phone" placeholder="Телефон" id="feedback-number" maxlength="21" required>
     </li>
-    <li>
+    <li class="modal__form-content-item">
       <label class="visually-hidden" for="feedback-email">E-mail:</label>
       <input class="modal__form-input" type="email" name="mail" placeholder="Электронная почта" id="feedback-email" required>
     </li>
-    <li>
+    <li class="modal__form-content-item">
       <label class="visually-hidden" for="feedback-message">Расскажите обо всём, что для вас важно</label>
       <textarea class="modal__form-input" name="comment" placeholder="Сообщение" id="feedback-message"></textarea>
     </li>
   </ul>
   <div class="modal__gdpr">
-    <p class="modal__gdpr-text">Нажимая “отправить”, вы даете согласие на <a href="#" target="_blank">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" target="_blank">политикой конфиденциальности</a></p>
+    <p class="modal__gdpr-text">Нажимая &laquo;отправить&raquo;, вы&nbsp;даете согласие на&nbsp;<a class="link link--accent" href="#" target="_blank">обработку персональных данных</a> и&nbsp;соглашаетесь с&nbsp;нашей <a class="link link--accent" href="#" target="_blank">политикой конфиденциальности</a></p>
     <button class="btn btn--action modal__gdpr-btn" type="submit">
       <span class="btn__text">Отправить</span>
       <svg class="btn__icon" width="24" height="24" aria-hidden="true">
