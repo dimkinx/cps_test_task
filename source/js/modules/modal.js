@@ -65,6 +65,8 @@ const removeListeners = (modal) => {
 
 function closeModal(name = modalName) {
   const modal = document.querySelector(`[data-modal="${name}"]`);
+  const isMenuOpened = Boolean(document.querySelector('[data-menu-opened]'));
+
   document.removeEventListener('click', documentClickHandler);
 
   if (!modal || !modal.classList.contains('is-active')) {
@@ -72,6 +74,12 @@ function closeModal(name = modalName) {
   }
 
   unlockFocus();
+
+  if (isMenuOpened) {
+    lockFocus('[data-menu]');
+    enableScrolling = false;
+  }
+
   modal.classList.remove('is-active');
   removeListeners(modal);
 
@@ -90,6 +98,7 @@ function closeModal(name = modalName) {
 
 function openModal(name = modalName) {
   const modal = document.querySelector(`[data-modal="${name}"]`);
+  const isMenuOpened = Boolean(document.querySelector('[data-menu-opened]'));
 
   if (!modal || modal.classList.contains('is-active')) {
     return;
@@ -105,7 +114,7 @@ function openModal(name = modalName) {
 
   modal.classList.add('is-active');
 
-  if (!openedModalElement) {
+  if (!openedModalElement && !isMenuOpened) {
     lockScroll();
   }
 
