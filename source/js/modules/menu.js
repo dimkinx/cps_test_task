@@ -30,7 +30,7 @@ const documentClickHandler = (evt) => {
 const documentKeydownHandler = (evt) => {
   const isEscKey = evt.key === 'Escape' || evt.key === 'Esc';
 
-  if (isEscKey) {
+  if (isEscKey && !document.querySelector('.modal.is-active')) {
     evt.preventDefault();
     // eslint-disable-next-line no-use-before-define
     closeMenu();
