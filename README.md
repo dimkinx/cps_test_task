@@ -1,5 +1,10 @@
 # CPS - тестовое задание
 
+[![EditorConfig](https://github.com/dimkinx/cps_test_task/actions/workflows/editorconfig.yml/badge.svg)](https://github.com/dimkinx/cps_test_task/actions/workflows/editorconfig.yml)
+[![HTML](https://github.com/dimkinx/cps_test_task/actions/workflows/html.yml/badge.svg)](https://github.com/dimkinx/cps_test_task/actions/workflows/html.yml)
+[![CSS](https://github.com/dimkinx/cps_test_task/actions/workflows/css.yml/badge.svg)](https://github.com/dimkinx/cps_test_task/actions/workflows/css.yml)
+[![JavaScript](https://github.com/dimkinx/cps_test_task/actions/workflows/javascript.yml/badge.svg)](https://github.com/dimkinx/cps_test_task/actions/workflows/javascript.yml)
+
 ## О проекте
 
 Данный проект реализован с целью определения приемлемого уровня знаний вёрстки. При разработке затрагиваются следующие темы:
@@ -50,7 +55,7 @@
   ```bash
   npm run build:prod
   ```
-- запуск тестирования на соответствие кодгайдам:
+- запуск валидации и тестирования на соответствие кодгайдам:
   ```bash
   npm test
   ```

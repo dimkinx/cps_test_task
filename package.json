@@ -16,9 +16,10 @@
     "build": "gulp build",
     "build:prod": "gulp build --production",
     "editorconfig": "editorconfig-checker",
+    "html": "java -jar node_modules/vnu-jar/build/dist/vnu.jar --skip-non-html build",
     "stylelint": "stylelint '**/*{.css,.scss}'",
     "eslint": "eslint '**/*{.js,.mjs}'",
-    "test": "npm run editorconfig & npm run stylelint & npm run eslint",
+    "test": "npm run editorconfig & npm run html & npm run stylelint & npm run eslint",
     "fonts": "gulp convertFonts"
   },
   "devDependencies": {
@@ -63,6 +64,7 @@
     "stylelint-prettier": "3.0.0",
     "stylelint-scss": "4.6.0",
     "terser-webpack-plugin": "5.3.7",
+    "vnu-jar": "23.4.11",
     "webpack": "5.80.0",
     "webpack-stream": "7.0.0"
   }
